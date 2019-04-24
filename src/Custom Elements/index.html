@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Components Demo</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <template id="profile-template">
+      <div class="card">
+        <img class="profile-pic" />
+        <div class="profile-info">
+          <span></span>
+        </div>
+      </div>
+    </template>
+
+    <div class="col-md-12">
+      <div class="speaker-list">
+        <my-profile img="alex.jpg" info="Alex Saez"></my-profile>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

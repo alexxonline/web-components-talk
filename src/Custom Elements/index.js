@@ -6,9 +6,9 @@ class MyProfileElement extends HTMLElement {
   }
 
   connectedCallback() {
-    // Acá podría definirlo como texto plano tambien
-    // `<div>...</div>`
-    this.innerHTML = template.innerHTML;
+    // Acá podría definir el template como texto plano tambien
+    // this.innerText = `<div>...</div>`;
+    this.appendChild(template.content.cloneNode(true));
     this._$image = this.querySelector("img");
     this._$info = this.querySelector("span");
     this._render(this);

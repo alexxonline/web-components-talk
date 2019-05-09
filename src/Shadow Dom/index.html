@@ -8,19 +8,31 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>Custom Elements</h1>
+    <h1>Shadow Dom</h1>
     <template id="profile-template">
+      <p>Test</p>
       <div class="card">
         <img class="profile-pic" />
         <div class="profile-info">
           <span></span>
+          <slot name="additional" class="additional"></slot>
         </div>
       </div>
     </template>
 
     <div class="col-md-12">
       <div class="speaker-list">
-        <my-profile img="alex.jpg" info="Alex Saez"></my-profile>
+        <my-profile
+          img="alex.jpg"
+          info="Alex Saez"
+          style="--text-color: #174da5;"
+        >
+          <ul slot="additional">
+            <li>Full stack developer</li>
+            <li>Technical content writer</li>
+          </ul>
+          <!--<div slot="additional">Full Stack developer</div>-->
+        </my-profile>
       </div>
     </div>
     <script src="index.js"></script>
